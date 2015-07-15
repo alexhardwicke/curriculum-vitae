@@ -12,6 +12,7 @@
 \documentclass[11pt,a4paper,final]{moderncv}
 \usepackage{fontspec}
 \moderncvtheme[blue]{classic}
+\newfontface\lserif{Liberation Serif}
 
 % DOCUMENT LAYOUT
 \usepackage[scale=0.88]{geometry}
@@ -26,7 +27,9 @@
 %\setmonofont[Scale=0.8]{Monaco}
 
 % ---- CUSTOM AMPERSAND
-\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+\newcommand{\Csh}{C{\lserif\#}}
+\newcommand{\Fsh}{F{\lserif\#}}
 
 % ---- MARGIN YEARS
 %\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
@@ -53,17 +56,17 @@
 \maketitle
 
 \section{Kunskaper}
-    \cvline{expert:}{C\#/.NET, WinRT/Phone/UWP}
-    \cvline{duktig:}{Android, ASP.NET, F\#, Git, JavaScript, SQL}
+    \cvline{expert:}{\Csh{}, WinRT/Phone/UWP}
+    \cvline{duktig:}{Android, ASP.NET, \Fsh, Git, Java, JavaScript, MSSQL}
     \cvline{intresserad:}{Swift, TypeScript}
 
 \section{Arbetserfarenhet}
-    \cventry{okt. 2014\\-- nu}{Utvecklare}{Erisma}{Malmö, Sverige}{}{
+    \cventry{okt. 2014\\-- nu}{Systemutvecklare}{Erisma}{Malmö, Sverige}{}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
-            \item Utvecklade Erismas core produkter (C++/CLI \& MFC, C\# \& ASP.NET MVC)
+            \item Utvecklade Erismas core produkter.
             \item Ansvarig för alla core produkter efter 6 månaders anställning.
-            \item Föreslog och implementerade många förbättringar till utvecklarmiljö i företaget, genom att bland annat lägga till stöd for felspårning i alla Erismas produkter, att migrera från .NET 3.5 till .NET 4.5 och att börja använda git istället för Mercurial.
-            \item Utvecklade och körde interna utbildingar i git och C\#.
+            \item Förbättrade utvecklarmiljön i företaget, genom att bland annat lägga till stöd for felspårning i alla Erismas produkter, att migrera från .NET 3.5 till .NET 4.5 och att börja använda git istället för Mercurial.
+            \item Utvecklade och körde interna utbildingar i git och \Csh{}.
         \end{itemize}
     }
     \cventry{aug. 2014\\-- okt. 2014}{Lärare}{Edument}{Malmö, Sverige}{}{
@@ -85,25 +88,26 @@
     Högska betyg i alla kurser.}
 
 \section{Egna projekt}
-    \cventry{dec. 2013\\-- nu}{Boswell}{Felspårning}{PCL och hemsida}{F\#}{
+    \cventry{sep. 2015\\-- nu}{Boswell}{Hemsida \& bibliotek}{}{\Fsh{}}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
             \item Felspårningssystem för UWP appar.
-            \item Skrivit helt i F\# med WebSharper.
-            \item Källkoden: \url{https://github.com/alexhardwicke/boswell} \newline
+            \item Skrivit helt i \Fsh{} med WebSharper.
+            \item Open source. Koden finns på: \url{https://github.com/alexhardwicke/boswell} \newline
         \end{itemize}
     }
-    \cventry{dec. 2013\\-- nu}{Surge}{Transmission Klient}{Windows 8 App}{C\# \& F\#}{
+    \cventry{dec. 2013\\-- nu}{Surge}{Windows 8.1 \& 10}{}{\Csh{} \& \Fsh{}}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
+            \item Fjärrkontroll/gränssnitt för Transmission applikationen.
             \item Över 25000 nerladdningar.
             \item Mer detaljer finns på \url{http://www.alexhardwicke.com/surge}
             \item Ladda ner från \url{http://apps.microsoft.com/windows/app/surge/97e772a6-62ff-4921-9cbf-44f9ec186037} \newline
         \end{itemize}
     }
-    \cventry{juni 2012\\-- augusti 2012}{Promenade}{Walk Tracker}{Android App}{Java}{
+    \cventry{juni 2012\\-- augusti 2012}{Promenade}{Android}{}{Java}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
             \item Min första stora mobilapplikation som jag skrev för att lära mig mobilutveckling med Android.
             \item Mer detaljer finns på \url{http://www.alexhardwicke.com/promenade}
-            \item Open source. Kod finns på \url{https://github.com/alexhardwicke/promenade}
+            \item Open source. Koden finns på \url{https://github.com/alexhardwicke/promenade}
             \item Ladda ner från \url{https://play.google.com/store/apps/details?id=com.digitalpies.promenade}
         \end{itemize}
     }

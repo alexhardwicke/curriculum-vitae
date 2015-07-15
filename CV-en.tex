@@ -12,6 +12,7 @@
 \documentclass[11pt,a4paper,final]{moderncv}
 \usepackage{fontspec}
 \moderncvtheme[blue]{classic}
+\newfontface\lserif{Liberation Serif}
 
 % DOCUMENT LAYOUT
 \usepackage[scale=0.88]{geometry}
@@ -26,7 +27,9 @@
 %\setmonofont[Scale=0.8]{Monaco}
 
 % ---- CUSTOM AMPERSAND
-\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+\newcommand{\Csh}{C{\lserif\#}}
+\newcommand{\Fsh}{F{\lserif\#}}
 
 % ---- MARGIN YEARS
 %\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
@@ -53,17 +56,17 @@
 \maketitle
 
 \section{Computer Skills}
-    \cvline{Expert:}{C\#/.NET, WinRT/Phone/UWP }
-    \cvline{Skilled:}{Android, ASP.NET, F\#, Git, Java, JavaScript, MSSQL}
+    \cvline{Expert:}{\Csh{}, WinRT/Phone/UWP }
+    \cvline{Skilled:}{Android, ASP.NET, \Fsh{}, Git, Java, JavaScript, MSSQL}
     \cvline{Interests:}{Swift, TypeScript}
 
 \section{Experience}
     \cventry{Oct. 2014\\-- present}{Software Developer}{Erisma}{Malmö, Sweden}{}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
-            \item Developed and maintained Erisma's core products, using C++/CLI \& MFC, C\# and ASP.NET MVC.
+            \item Developed and maintained Erisma's core products.
             \item Became solely responsible for the core products after six months employment.
-            \item Suggested, demonstrated and implemented several substantial improvements to the developer workflow, including adding error tracking throughout Erisma's software, moving all of Erisma's software from .NET 3.5 to .NET 4.5, and moving from Mercurial to git.
-            \item Developed and ran  git and C\# training sessions internally.
+            \item Implemented substantial improvements to developer workflow, including adding error tracking throughout Erisma's software, moving all products from .NET 3.5 to .NET 4.5, and moving from Mercurial to git.
+            \item Created and ran git and \Csh{} training sessions internally.
         \end{itemize}
     }
     \cventry{Aug. 2014\\-- Oct. 2014}{Instructor}{Edument}{Malmö, Sweden}{}{
@@ -82,18 +85,19 @@
 
 \section{Education}
     \cventry{Sep. 2011\\-- June 2014}{Computer Science}{}{Malmö University}{Malmö, Sweden}{
-    Top grades in all courses (ECTS Grade A / Swedish VG / UK 1st)}
+    UK 1st class / Swedish VG}
 
 \section{Personal Projects}
-    \cventry{Sep. 2015\\-- present}{Boswell}{Error Tracking}{PCL and website}{F\#}{
+    \cventry{Sep. 2015\\-- present}{Boswell}{Website \& PCL}{}{\Fsh{}}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
             \item A full error tracking system for UWP apps.
-            \item Written entirely in F\# using WebSharper.
-            \item Source code available at \url{https://github.com/alexhardwicke/boswell} \newline
+            \item Written entirely in \Fsh{} using WebSharper.
+            \item Open source. Code available at \url{https://github.com/alexhardwicke/boswell} \newline
         \end{itemize}
     }
-    \cventry{Dec. 2013\\-- present}{Surge}{Remote Transmission Client}{Windows 8 Modern App}{C\# \& F\#}{
+    \cventry{Dec. 2013\\-- present}{Surge}{Windows 8.1 \& 10}{}{\Csh{} \& \Fsh{}}{
         \begin{itemize}% \itemsep -2pt % reduce space between items
+            \item Remote interface for the Transmission BitTorrent client.
             \item Over 25000 downloads.
             \item More details available at \url{http://www.alexhardwicke.com/surge}
             \item Available at \url{http://apps.microsoft.com/windows/app/surge/97e772a6-62ff-4921-9cbf-44f9ec186037} \newline
